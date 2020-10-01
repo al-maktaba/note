@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activities.SplashScreenActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/citationTextView"
+        android:text="Жди чуда до смерти"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="@android:color/background_dark"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+</RelativeLayout>

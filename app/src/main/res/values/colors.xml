@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFC636</color>
+    <color name="colorPrimaryDark">#FFC636</color>
+    <color name="colorAccent">#FFBE00</color>
+    <color name="colorLightGray">#F5F5F5</color>
+    <color name="colorOfAddIcons">#959595</color>
+    <color name="noteColor0">#FFFFFF</color>
+    <color name="noteColor1">#C8C8C8</color>
+    <color name="noteColor2">#FFD15E</color>
+    <color name="noteColor3">#FF6054</color>
+    <color name="noteColor4">#000000</color>
+
+
+</resources>
