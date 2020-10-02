@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements NotesListener {
         notesRecyclerView.setAdapter(notesAdapter);
 
         getNotes(REQUEST_CODE_SHOW_NOTES, false);
+        Toast.makeText(this, "02", Toast.LENGTH_SHORT).show();
 
         EditText searchInput = findViewById(R.id.searchEditText);
         searchInput.addTextChangedListener(new TextWatcher() {
