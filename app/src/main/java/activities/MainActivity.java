@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements NotesListener {
 
     private AlertDialog dialogAddURL;
 
+    private int spanCount = 2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +63,6 @@ public class MainActivity extends AppCompatActivity implements NotesListener {
 
         noteList = new ArrayList<>();
         notesAdapter = new NotesAdapter(noteList, this);
-        Toast.makeText(this, "Lol", Toast.LENGTH_SHORT).show();
-
         FloatingActionButton addNoteMain = findViewById(R.id.addNoteButton);
         addNoteMain.setOnClickListener(new View.OnClickListener() {
 
@@ -78,11 +78,10 @@ public class MainActivity extends AppCompatActivity implements NotesListener {
 
 
         notesRecyclerView = findViewById(R.id.notesRecyclerView);
-        notesRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        notesRecyclerView.setLayoutManager(new StaggeredGridLayoutManager( spanCount ,StaggeredGridLayoutManager.VERTICAL));
         notesRecyclerView.setAdapter(notesAdapter);
 
         getNotes(REQUEST_CODE_SHOW_NOTES, false);
-        Toast.makeText(this, "02", Toast.LENGTH_SHORT).show();
 
         EditText searchInput = findViewById(R.id.searchEditText);
         searchInput.addTextChangedListener(new TextWatcher() {
@@ -132,6 +131,22 @@ public class MainActivity extends AppCompatActivity implements NotesListener {
                 showAddURLDialog();
             }
         });
+
+        findViewById(R.id.imageChangeLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeListLayout();
+            }
+        });
+    }
+
+    private  void changeListLayout(){
+        if(spanCount == 2){
+            spanCount = 1;
+        } else {
+            spanCount = 2;
+        }
+        notesRecyclerView.setLayoutManager(new StaggeredGridLayoutManager( spanCount,StaggeredGridLayoutManager.VERTICAL));
     }
 
     @Override
