@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements NotesListener {
 
         noteList = new ArrayList<>();
         notesAdapter = new NotesAdapter(noteList, this);
+        Toast.makeText(this, "Lol", Toast.LENGTH_SHORT).show();
 
         FloatingActionButton addNoteMain = findViewById(R.id.addNoteButton);
         addNoteMain.setOnClickListener(new View.OnClickListener() {
